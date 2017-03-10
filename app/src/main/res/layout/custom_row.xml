@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="tribeinfo" type="com.example.jitu.mvvmdesign.model.TribeUser"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="219dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@={tribeinfo.title}"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="93dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteY="9dp"
+            app:layout_constraintRight_toLeftOf="@+id/textView3"
+            android:layout_marginRight="29dp"
+            app:imageUrl="@{tribeinfo.coverimage}" />
+    </android.support.constraint.ConstraintLayout>
+    </layout>
